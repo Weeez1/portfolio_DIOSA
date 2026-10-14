@@ -1,0 +1,203 @@
+@import url("http://googleapis.com");
+
+
+/* Обнуление базовых отступов*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/*Универсальный стиль лдя картинок-заглушек*/
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*1. Стиль баннера*/
+.hero-banner {
+    width: 100vw;
+    height: auto;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.mid-banner,
+.portfolio-img {
+    width: 100%;
+    height: auto;
+    object-fit: containw;
+}
+
+/*2 и 4, Стиль с описанием */
+.bio-section {
+    display: flex;
+    width: 100vw;
+    background-color: #ffffff;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.reverse-layout {
+    flex-direction: row;
+}
+
+.bio-photo {
+    width: 62.5%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.bio-photo .contains-img {
+    width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+.bio-text {
+    width: 37.5%;
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-name-block,
+.contact-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.model-name-block h1 {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 35px;
+    text-align: center;
+    display: inline-block;
+    padding: 0 40px 12px 40px;
+}
+
+.model-name-block h1:last-child {
+    margin-bottom: 0;
+}
+
+.contact-links {
+    gap: 40px;
+}
+
+/*3. Средний баннер*/
+.mid-banner {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.contact-links {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.contact-links a {
+    font-size: 28px;
+    font-weight: 300;
+    color: #111111;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transform-origin: bottom left;
+    display: inline-block;
+    padding: 0 40px 12px 40px;
+}
+
+.contact-links a:hover {
+    opacity: 0.4;
+    letter-spacing: 0.25em;
+}
+
+/*Разделитель*/
+.dots-divider {
+    text-align: center;
+    margin: 90px 0 50px 0;
+}
+
+.dots-divider span {
+    font-size: 16px;
+    color: #cccccc;
+    margin: 0 10px;
+}
+
+/*Адаптивность для экранов смартфонов*/
+@media (max-width: 768px) {
+
+    .hero-banner {
+        height: 50vh;
+    }
+
+    .bio-section {
+        flex-direction: column;
+        padding: 50px 0;
+    }
+
+    .reverse-layout {
+        flex-direction: column-reverse;
+    }
+
+    .bio-photo,
+    .contains-img {
+        max-width: 60vh;
+    }
+
+    .bio-photo,
+    .bio-text {
+        width: 100%;
+    }
+
+    .bio-text {
+        padding: 40px 24px 0 24px;
+    }
+
+    .model-name-block h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+        padding: 0 25px 10px 25px;
+    }
+
+    .contact-links a {
+        font-size: 22px;
+        padding: 0 25px 10px 25px
+    }
+
+    .contact-links {
+        gap: 30px;
+    }
+}
